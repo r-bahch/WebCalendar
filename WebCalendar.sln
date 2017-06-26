@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCalendar.Data", "WebCalendar.Data\WebCalendar.Data.csproj", "{298AC889-36C3-4120-8211-1AB3FA4FFA03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCalendar.App", "WebCalendar.App\WebCalendar.App.csproj", "{7642063A-A632-4E0A-8D41-E639BDFA2611}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCalendar.App.Tests", "WebCalendar.App.Tests\WebCalendar.App.Tests.csproj", "{7E89407C-36DB-42B3-B599-4D3BA113B0DE}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{298AC889-36C3-4120-8211-1AB3FA4FFA03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{298AC889-36C3-4120-8211-1AB3FA4FFA03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{298AC889-36C3-4120-8211-1AB3FA4FFA03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{298AC889-36C3-4120-8211-1AB3FA4FFA03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7642063A-A632-4E0A-8D41-E639BDFA2611}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7642063A-A632-4E0A-8D41-E639BDFA2611}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7642063A-A632-4E0A-8D41-E639BDFA2611}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7642063A-A632-4E0A-8D41-E639BDFA2611}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E89407C-36DB-42B3-B599-4D3BA113B0DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E89407C-36DB-42B3-B599-4D3BA113B0DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E89407C-36DB-42B3-B599-4D3BA113B0DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E89407C-36DB-42B3-B599-4D3BA113B0DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
