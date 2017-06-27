@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en-us">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Web Calendar</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -16,14 +16,35 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Web Calendar", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    @*@if (User.Identity.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("My Orders", "MyOrders", "Orders")</li>
+                    }*@
                 </ul>
+                @if (this.User.Identity.IsAuthenticated)
+                {
+                    using (Html.BeginForm("Logout", "Users", FormMethod.Post, new { id = "logout-form" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a id="nolink">Hello, @User.Identity.Name</a></li>
+                            <li><a href="#" id="logout-link"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                        </ul>
+                    }
+                }
+                else
+                {
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="@Url.Action("Login", "Users")"><span class=" glyphicon glyphicon-log-in"></span> Login</a></li>
+                        <li><a href="@Url.Action("Register", "Users")"><span class=" glyphicon glyphicon-user"></span> Register</a></li>
+
+                    </ul>
+                }
             </div>
         </div>
     </div>
@@ -37,6 +58,18 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+
     @RenderSection("scripts", required: false)
+
+
+    <script type="text/javascript">
+            $(function () {
+                $("#logout-link").click(function (e) {
+                    $("#logout-form").submit();
+                    e.preventDefault();
+                    e.stopPropagation();
+                });
+            });
+    </script>
 </body>
 </html>

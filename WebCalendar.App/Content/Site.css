@@ -22,3 +22,13 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/*Make the checkboxes bigger*/
+    input[type=checkbox] {
+        /* Double-sized Checkboxes */
+        -ms-transform: scale(1.5) translateX(2px); /* IE */
+        -moz-transform: scale(1.5) translateX(2px); /* FF */
+        -webkit-transform: scale(1.5) translateX(2px); /* Safari and Chrome */
+        -o-transform: scale(1.) translateX(2px); /* Opera */
+        padding: 10px;
+    }

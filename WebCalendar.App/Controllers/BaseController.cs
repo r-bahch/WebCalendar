@@ -5,7 +5,7 @@ using System.Web.Mvc;
 using System.Web.Mvc.Filters;
 using WebCalendar.Data;
 
-namespace MaznaMutska.App.Controllers
+namespace WebCalendar.App.Controllers
 {
     [Authorize] // All controllers that inherit from this one will be available only for registered users
     public abstract class BaseController : Controller
