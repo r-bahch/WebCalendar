@@ -1,0 +1,8 @@
+﻿@model DateTime?
+@Html.TextBox("", 
+    String.Format("{0:dd.MM.yyyy}", 
+    Model.HasValue ? Model.Value.ToShortDateString() : string.Empty), 
+    new { @class = "datepicker form-control", placeholder = ViewData["placeholder"] })
+
+
+

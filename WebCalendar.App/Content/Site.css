@@ -23,7 +23,7 @@ textarea {
     max-width: 280px;
 }
 
-/*Make the checkboxes bigger*/
+    /*Make the checkboxes bigger*/
     input[type=checkbox] {
         /* Double-sized Checkboxes */
         -ms-transform: scale(1.5) translateX(2px); /* IE */
@@ -32,3 +32,7 @@ textarea {
         -o-transform: scale(1.) translateX(2px); /* Opera */
         padding: 10px;
     }
+
+.dl-spaced dd:not(:first-of-type), dt:not(:first-of-type) {
+    margin-top: 8px;
+}
